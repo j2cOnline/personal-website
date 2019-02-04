@@ -1,0 +1,1 @@
+const contact = '<div class="newDiv main-body body"><h1>This is where all my contact shit will be</h1></div>';
