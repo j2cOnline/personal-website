@@ -3,14 +3,14 @@ const aboutMe = `<div class="newDiv main-body body">
 
 <div class="about-grid-container">
     <div  class="about-text">
-        <img src="img/me.jpg" alt="picture of Justin">
-        <p>Hello, this is a little site explaing stuff like what I do sing, so I decided to attend Collins College and receive a Bachelor of the Arts focused in Game Design. After
+        <img src="img/me.png" alt="picture of Justin">
+        <h4>Hello, this is a little site explaing stuff like what I do sing, so I decided to attend Collins College and receive a Bachelor of the Arts focused in Game Design. After
         graduating, I was hired by a small software company specializing in electronic bingo and other charitable gaming
         software. I originally was hired on just t
-        </p>
+        </h4>
     </div>
     <div  class="about-pic">
-        <img src="img/me.jpg" alt="picture of Justin">
+        
         <p>This can also be some contact information. Could show some contanct links</p>
     </div>
     <div class="about-skills">
@@ -69,16 +69,24 @@ const aboutMe = `<div class="newDiv main-body body">
         
     </div>
     <div class="about-hobbies">
-        <h1>Hobbies</h1>
-        <p>This will be a bunch of stuff hobby stfasdfuff
-            fsdafsadfsdafs dfsdfsadfhjlkhas
-            sadkfhsdakfhsadf sdldfsfs sdfkb kjshadf lkhdsf lkjh asdf
-            lskdjhflsafh  lhdf  lkasdhf  lahsdfl  sdkjhfsh  ljhlhasdf
-            sdfhjshlkh askdfhshflskhflh l lh  hlkjhhh h kljhj lahsdfl
-            lasdhjf lkjhasdf  lkhs  ashhs lkh k lsdhlkshdflkhsd lh.
-        </p>
-        <div class="test-before"></div>
+       <ul>
+            <li><h1>I can help with...</h1></li>
+            <li><h3>Logo Design</h3></li>
+            <li><h3>Web-Dev</h3></li>
+            <li><h3>UX/UI Design</h3></li>
+            <li><h3>Animation</h3></li>
+            <li><h3>Game Design</h3></li>
+            <li><h3>Mograph</h3></li>
+        </ul>
     </div>
 </div>
+<h1>send me a message</h1>
+<div class="form-container">
+                     <form action="https://formspree.io/justincrawfordonline@gmail.com" method="POST">
+                       <input type="email" name="_replyto" id="email-address" placeholder="Your e-mail">   
+                      <textarea name="comment[body]" rows="1" cols="50" wrap="physical" id="email-text" placeholder="Let's work together!"></textarea>
+                      <input type="submit" value="Send" id="email-submit-btn">
+                     </form>
+                    </div> 
 </div>
                  `;
