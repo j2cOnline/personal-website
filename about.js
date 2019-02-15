@@ -14,7 +14,7 @@ const aboutMe = `<div class="newDiv main-body body">
         <p>This can also be some contact information. Could show some contanct links</p>
     </div>
     <div class="about-skills">
-        <h1 style="font-family: 'Quantico', sans-serif; width: 100%">Software</h1>
+        <h1 style="width: 100%">Software I use</h1>
         
         <div class="software-icons photoshop">
             <img src="img/icons/photoshop.png" alt="photoshop">
@@ -46,7 +46,7 @@ const aboutMe = `<div class="newDiv main-body body">
                 <span style="width: 70%"></span>
             </div>
         </div>
-        <h1 style="font-family: 'Quantico', sans-serif; width: 100%">Languages</h1>
+        <h1 style="width: 100%">Languages I study</h1>
         <div class="software-icons javascript">
             <img src="img/icons/javascript.png" alt="javascript">
             <div class="meter">
@@ -80,7 +80,7 @@ const aboutMe = `<div class="newDiv main-body body">
         </ul>
     </div>
 </div>
-<h1>send me a message</h1>
+<h1>Send me a message</h1>
 <div class="form-container">
                      <form action="https://formspree.io/justincrawfordonline@gmail.com" method="POST">
                        <input type="email" name="_replyto" id="email-address" placeholder="Your e-mail">   
