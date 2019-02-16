@@ -4,14 +4,29 @@ const aboutMe = `<div class="newDiv main-body body">
 <div class="about-grid-container">
     <div  class="about-text">
         <img src="img/me.png" alt="picture of Justin">
-        <h4>Hello, this is a little site explaing stuff like what I do sing, so I decided to attend Collins College and receive a Bachelor of the Arts focused in Game Design. After
-        graduating, I was hired by a small software company specializing in electronic bingo and other charitable gaming
-        software. I originally was hired on just t
-        </h4>
+        <h1>I make digital stuff
+        </h1>
+        <h3>From tech support to game design I do it all! Majority of my experience is creating graphics for gaming software. I'm always
+        expanding my skills and looking for new opportunities. Have a project or hiring? Let me know!
+        </h3>
     </div>
-    <div  class="about-pic">
-        
-        <p>This can also be some contact information. Could show some contanct links</p>
+   <div  class="about-pic">
+<h1>Always Learning</h1>
+<h3>Latest badges earned at Treehouse.</h3>
+    <div class="badge-container">
+        <div class="badge">
+            <div class="badge-1"></div>
+            <p class="badge-1-title"></p>
+        </div>
+        <div class="badge">
+            <div class="badge-2"></div>
+            <p class="badge-2-title"></p>
+        </div>
+        <div class="badge">
+            <div class="badge-3"></div>
+            <p class="badge-3-title"></p>
+        </div>
+    </div>
     </div>
     <div class="about-skills">
         <h1 style="width: 100%">Software I use</h1>
@@ -83,10 +98,14 @@ const aboutMe = `<div class="newDiv main-body body">
 <h1>Send me a message</h1>
 <div class="form-container">
                      <form action="https://formspree.io/justincrawfordonline@gmail.com" method="POST">
-                       <input type="email" name="_replyto" id="email-address" placeholder="Your e-mail">   
-                      <textarea name="comment[body]" rows="1" cols="50" wrap="physical" id="email-text" placeholder="Let's work together!"></textarea>
-                      <input type="submit" value="Send" id="email-submit-btn">
-                     </form>
+        <input type="text" placeholder="Your name" class="email-name">
+        <input type="email" name="_replyto" id="email-address" placeholder="Your e-mail">   
+        <textarea name="comment[body]" rows="1" cols="50" wrap="physical" id="email-text" placeholder="Let's work together!"></textarea>
+        <div class="hpot">
+            <label>Leave this field empty: <input name="_gotcha"></label>
+        </div>
+        <input type="submit" value="Send" id="email-submit-btn">
+    </form>
                     </div> 
 </div>
                  `;

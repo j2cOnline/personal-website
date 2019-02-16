@@ -24,7 +24,7 @@ const projects = `
              <h1>Slot Machine Suite</h1>
              <h3>
                 First step into slot machine gaming, this is the latest ongoing project that is growing in east coast markets that
-                require a skill based option. Check out my <span><i class="fab fa-youtube"></i></span> channel for a demo!</h3>
+                require a skill based option. Check out my <span><a href="https://www.youtube.com/playlist?list=PLn5H-IzY7glDhlgN-F-AklHua48Ji4YAO" target="_blank"><i class="fab fa-youtube"></i></a></span> channel for a demo!</h3>
              <img src="img/projects/cabinetBanner.jpg" alt="">
              
              <img src="img/projects/crankExample.jpg" alt="">

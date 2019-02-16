@@ -1,13 +1,57 @@
 *{
   box-sizing: border-box;
   font-family: 'Mandali', sans-serif;
-  color: #005175;
+ 
 }
 ul>li{
   margin: -1rem;
 }
 
+h1,h2,h3,h4,p {
+   color: #005175;
+}
+/*---------TreeHouse Stuff -------*/
+.badge-container{
+      display: flex;
+      width: 100%;
+      justify-content: center;
+  
+}
+.badge {
+ 
+  margin: 1em;
+  width: 25%;
+}
+.badge-1,
+.badge-2,
+.badge-3{
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 5px;
+}
 
+/*------------------- Puff Animation----------------- */
+
+.puff{
+  width: 113px;
+  height: 100px;
+  background: url('img/CloudPuff/puffStrip.png');
+  animation: playPuff 1s steps(13) forwards;
+  animation-iteration-count: 1;
+  z-index: 2005;
+  
+}
+#empty-div{
+  position: fixed;
+}
+@keyframes playPuff {
+    100% {
+    background-position: -1469px;
+  }
+}
 
 /*------------- circle Fun --------------- */
 
@@ -27,6 +71,7 @@ ul>li{
   top: 14%;
   position: relative;
   border-radius: 50%;
+  transition-duration: 1s;
   transform: rotate3d(0, 1, 0, 0deg);
   animation: rotate3d 6s cubic-bezier(.15, -0.29, .82, 1.31) infinite forwards;
 }
@@ -92,7 +137,7 @@ ul>li{
   display: flex;
   max-width: 512px;
   flex-direction: row;
-  margin-bottom: 19em;
+  margin-bottom: 24em;
   margin-top: 1em;
   }
 #email-text{
@@ -103,6 +148,17 @@ ul>li{
   border: solid 3px #0092e2;
   border-bottom-width: thin;
 }
+.hpot {
+  display: none;
+}
+
+.email-name {
+  margin-bottom: 1em;
+  border-radius: 5px;
+  border: solid 2px #0092e2;
+  border-bottom-width: thin;
+}
+
 #email-address{
   margin-bottom: 1em;
   border-radius: 5px;
@@ -200,6 +256,19 @@ ul>li{
   overflow: hidden;
 }
 
+ a {
+   text-decoration: none;
+  color: #005175;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1)
+} 
+a:hover{
+  color: orangered;
+}
+.center-circle:hover{
+  color: orangered;
+}
+
 .test-before{
   width: 50px;
   height: 50px;
@@ -213,6 +282,17 @@ ul>li{
   height: 50px;
   background-color: rgb(216, 24, 11);
   content: "HELLO";
+}
+
+.demo-div{
+  margin-top: -3em;
+  margin-bottom: 4em;
+  display: flex;
+  flex-direction: column;
+}
+.magic-gif{
+  width: 80%;
+  max-width: 800px;
 }
 
 .creative-tech{
@@ -290,6 +370,7 @@ ul{
   background-size: contain;
   position: relative;
   font-size: 1em;
+  animation: slightUpDown 6.5s cubic-bezier(.15, -0.29, .82, 1.31) forwards infinite;
 }
 
 .center-shit{
@@ -439,14 +520,13 @@ ul{
 }
 
 .about-pic{
+
   grid-area: pic;
   grid-column-start: 1;
   grid-column-end: 6;
   grid-row-start: 9;
   grid-row-end: 10;
-  background-color: tomato;
-  
-}
+  }
 
 .about-text{
   font-family: 'Mandali', sans-serif;
@@ -473,6 +553,7 @@ ul{
 }
 
 .about-hobbies{
+  justify-content: center;
   grid-area: hobbies;
   grid-column-start: 1;
   grid-column-end: 6;
@@ -914,8 +995,18 @@ path {
 .projects-grid-container{
   display: grid;
   grid-template-columns:repeat(6, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   grid-gap: 10px;
+}
+
+.form-container{
+      margin-bottom: 18em;
+}
+
+.badge-container {
+  display: flex;
+  width: 80%;
+  justify-content: center;
 }
 
 /*----------------- grid Change --------------*/

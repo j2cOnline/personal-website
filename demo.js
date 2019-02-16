@@ -1,1 +1,9 @@
-const demo = '<div class="newDiv main-body body"><h1>Maybe Ill put a demo video here, I dont know</h1><p>Who knows how this is gonna work!</p></div>';
+const demo = `<div class="newDiv main-body body">
+                <div class="demo-div">      
+                <h1>Coming Soon...</h1>
+                     <a target="_blank" href="https://youtu.be/_ZCl8_3_N6I"><img class="magic-gif"  src="img/MagicTouchClip.gif" alt="gameplay of magic touch"></a>
+                    <a target="_blank" href="https://youtu.be/_ZCl8_3_N6I">YouTube Demo Reel</a>
+                </div>
+              </div>`;
+
+                
