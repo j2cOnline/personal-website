@@ -6,6 +6,7 @@
       crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="img/favicon.ico" />
     <meta charset="utf-8">
+    <meta name="theme-color" content="#005175" />
     <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Mandali|Quantico" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/normalize.css" />
@@ -486,10 +487,10 @@
           <circle class="st18" cx="512.396" cy="983.87" r="11.057"/>
           <circle class="st18" cx="850.759" cy="167.9" r="11.056"/>
           <circle class="st18" cx="954.11" cy="322.433" r="11.056"/>
-          <g class="test-circle">
+          
             <path class="st18" d="M76.294,698.924c-5.64,2.346-12.109-0.33-14.452-5.968c-2.341-5.641,0.332-12.109,5.97-14.453
              c5.64-2.342,12.108,0.333,14.45,5.973C84.605,690.113,81.932,696.584,76.294,698.924z"/>
-          </g>
+          
           <circle class="st18" cx="329.014" cy="64.113" r="11.056"/>
           <path class="st18" d="M700.114,957.775c-5.637,2.34-12.108-0.333-14.45-5.973c-2.34-5.64,0.332-12.109,5.973-14.45
             c5.638-2.342,12.107,0.332,14.448,5.972C708.429,948.961,705.753,955.431,700.114,957.775z"/>
@@ -585,6 +586,11 @@
             </div>
        
           </header>
+
+<div class="load-screen">
+  <div class="load-animation"></div>
+</div>
+
 <div id="empty-div"></div>
 
 <div id="replace"></div>
@@ -595,13 +601,14 @@
 
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
     <script src="lib/jQueryLib.js"></script>
-    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
     <script src="lib/magnific-popup.js"></script>
     <script src="scripts.js"></script>
     <script src="about.js"></script>
     <script src="projects.js"></script>
     <script src="contact.js"></script>
     <script src="demo.js"></script>
+    <script>addDiv(projects)</script>
     <script>addDiv(aboutMe);
             getTreeHouseStats();
     </script>

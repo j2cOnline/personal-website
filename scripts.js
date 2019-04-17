@@ -1,6 +1,16 @@
-const divTransitionDelay = 500;
 
-//---Dealing with states---///
+var divTransitionDelay = 1250;
+
+$(document).ready(function () {
+    $(window).on("load", function () {
+        $('.load-screen').addClass('move-load-screen');
+        
+    });
+    
+});
+
+
+//---Dealing with states //Forward and Back---///
 
 window.onpopstate = function (event) {
     var lastState = JSON.stringify(event.state);
@@ -8,17 +18,17 @@ window.onpopstate = function (event) {
             
     if(goToState){
     
-        if (goToState.state == "about") {
+        if (goToState.state == "index.html/about") {
             addDiv(aboutMe);
             getTreeHouseStats();
         } 
-        if (goToState.state == "projects") {
+        if (goToState.state == "index.html/projects") {
             addDiv(projects);
         }
-        if (goToState.state == "demo") {
+        if (goToState.state == "index.html/demo") {
             addDiv(demo);
         }
-        if (goToState.state == "contact") {
+        if (goToState.state == "index.html/contact") {
             addDiv(contact);
         }
         
@@ -37,6 +47,7 @@ function removeDiv(){
 }
 
 $('#aboutButton').click(function(){
+    if(btnsClicked.aboutBtn == false){
     $('.newDiv').removeClass('removeDiv').addClass('slideDiv').delay(divTransitionDelay).queue( function (next) {
         addDiv(aboutMe);
         getTreeHouseStats();
@@ -44,51 +55,83 @@ $('#aboutButton').click(function(){
         next();
     });
      history.pushState({
-        state: 'about'
-     }, 'title', 'about');
-  
+        state: 'index.html/about'
+     }, 'title', 'index.html');
+     btnsClicked.demoBtn = false;
+     btnsClicked.projectsBtn = false;
+     btnsClicked.contactBtn = false;
+     btnsClicked.aboutBtn = true;
+    }
  });
 
-$('#projectsButton').click(function(){
 
+$('#projectsButton').click(function(){
+    if (btnsClicked.projectsBtn == false){
     $('.newDiv').removeClass('removeDiv').addClass('slideDiv').delay(divTransitionDelay).queue(function (next) {
         addDiv(projects);
         $('.newDiv').addClass('removeDiv');
         next();
     });
      history.pushState({
-         state: 'projects'
-     }, 'title', 'projects');
+         state: 'index.html/projects'
+     }, 'title', 'index.html');
+    btnsClicked.demoBtn = false;
+    btnsClicked.projectsBtn = true;
+    btnsClicked.contactBtn = false;
+    btnsClicked.aboutBtn = false;
+    }
 });
 
 $('#contactButton').click(function(){
-
+    if (btnsClicked.contactBtn == false){
     $('.newDiv').removeClass('removeDiv').addClass('slideDiv').delay(divTransitionDelay).queue(function (next) {
         addDiv(contact);
         $('.newDiv').addClass('removeDiv');
         next();
     });
      history.pushState({
-         state: 'contact'
-     }, 'title', 'contact');
+         state: 'index.html/contact'
+     }, 'title', 'index.html');
+    btnsClicked.demoBtn = false;
+    btnsClicked.projectsBtn = false;
+    btnsClicked.contactBtn = true;
+    btnsClicked.aboutBtn = false;
+    }
 });
 
 $('#demoButton').click(function(){
-   
+    if(btnsClicked.demoBtn == false){
+   window.location.href = 'https://justincrawfordonline.com/magic-touch/index.html';
     $('.newDiv').removeClass('removeDiv').addClass('slideDiv').delay(divTransitionDelay).queue(function (next) {
-        addDiv(demo);
-        $('.newDiv').addClass('removeDiv');
-        next();
+        //addDiv(demo);
+        //$('.newDiv').addClass('removeDiv');
+        //next();
     });
      history.pushState({
-         state: 'demo'
-     }, 'title', 'demo');
+         state: 'index.html/demo'
+     }, 'title', 'index.html');
+    btnsClicked.demoBtn = true;
+    btnsClicked.projectsBtn = false;
+    btnsClicked.contactBtn = false;
+    btnsClicked.aboutBtn = false;
+    }
 });
+
+/////----------Model Pop Up ----------------////////////
+$('body').magnificPopup({
+    delegate: 'a.open-popup-link',
+    type: 'inline',
+    closeOnContentClick: false,
+    closeBtnInside: true,
+    removalDelay: 300,
+});
+
 
 //---------------Change header nav on scroll -------////
 
 $(window).scroll(function () {
-    if(pageYOffset >= 99){
+    if(pageYOffset >= 59){
+        $('.icons-footer').css("font-size", "0em");
         $('#quote-of-day').hide("fade");
         $('#quote-wrapper').hide("fade");
         $('.cartoon-badge').addClass('shrink-header');
@@ -97,13 +140,19 @@ $(window).scroll(function () {
         $('.item4').addClass('item4-scrolled');
         $('.nav-bar-top').addClass('nav-bar-scrolled');
         $("header").addClass('header-scrolled');
-    } else{
+    } else if (pageYOffset <= 25) {
+        $('.icons-footer').css("font-size", "2em");
         $('.cartoon-badge').removeClass('shrink-header');
         $('.item2').removeClass('item2-scrolled');
         $('.item3').removeClass('item3-scrolled');
         $('.item4').removeClass('item4-scrolled');
         $('.nav-bar-top').removeClass('nav-bar-scrolled');
         $("header").removeClass('header-scrolled');
+    }
+    if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+       $('.icons-footer').css("font-size", "2em");
+        
+        
     }
 });
 //-----Quote of the Day--------///
@@ -160,7 +209,7 @@ $('.cartoon-badge').click(function(){
 });
 $('#quote-wrapper').click(function (){
     $('#quote-wrapper').hide("puff");
-    $('#quote-of-day').hide( "puff");
+    $('#quote-of-day').hide();
 });
 
 
@@ -169,12 +218,15 @@ $('#quote-wrapper').click(function (){
 
 $(document).on('mousedown', function () {
     $('#empty-div').removeClass('puff');
+    
     $(document).on('mouseup', function (event) {
-      let xPos = event.clientX - 55;
-      let yPos = event.clientY -55;
+      var xPos = event.clientX - 55;
+      var yPos = event.clientY - 55;
       $('#empty-div').css("top", yPos);
       $('#empty-div').css("left", xPos);
+      $('#empty-div').show();
       $('#empty-div').addClass('puff');
+            
     });
 });
 
@@ -186,9 +238,9 @@ function getTreeHouseStats(){
     
         jQuery.get("https://teamtreehouse.com/justincrawford2003.json", function (data) {
             var totalNumOfBadges = data.badges.length;
-            let lastThreeBadges = [];
-            let badgeNames = [];
-            for (let i = totalNumOfBadges - 3; i < totalNumOfBadges; i++) {
+            var lastThreeBadges = [];
+            var badgeNames = [];
+            for (var i = totalNumOfBadges - 3; i < totalNumOfBadges; i++) {
                 lastThreeBadges.push(data.badges[i].icon_url);
                 badgeNames.push(data.badges[i].name);
             }
@@ -253,3 +305,12 @@ function checkCookie(cname) {
    
 }
 ////-------------end of Cookie functions---------//////////////////////
+
+//// ------------- PAGES ----------------////////////////////
+
+let btnsClicked = {
+    aboutBtn: true,
+    projectsBtn: false,
+    demoBtn: false,
+    contactBtn: false
+}
