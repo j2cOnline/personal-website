@@ -1,4 +1,4 @@
-const contact = `<div class="newDiv main-body body">
+var contact = `<div class="newDiv main-body body">
                      
                   <h1>Contact Me</h1>
                   <h3>I'm open to new opportunities and challenges. Let me know what you're working on and let's find creative solutions!</h3>
@@ -13,9 +13,4 @@ const contact = `<div class="newDiv main-body body">
         <input type="submit" value="Send" id="email-submit-btn">
     </form>
                     </div> 
-
-
-
-
-
                 </div>`;

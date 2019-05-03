@@ -24,7 +24,7 @@ var projects = `<div class="newDiv main-body body">
             <p>An app for In N Out fans on a diet.</p>
             <div id="in-n-out" class="white-popup mfp-hide">
                 <h2>In N Out Diet</h2>
-                <a href="https://justincrawfordonline.com/in-n-out-diet" target="_blank" class="open-popup-link"><img src="img/projects/in-n-out-burger.jpg" alt=""></a>
+                <a href="https://justincrawfordonline.com/in-n-out-diet" target="_blank" ><img src="img/projects/in-n-out-burger.jpg" alt=""></a>
                 <p>I'm currenty working on a Vue.js single page app. The main feature will be a calorie calculator specific to the In-N-Out menu.</p>
             </div>
         </div>
@@ -36,7 +36,7 @@ var projects = `<div class="newDiv main-body body">
             <p>Flash Card app using Vue.JS framework</p>
             <div id="vue-js" class="white-popup mfp-hide">
                 <h2>Vue.JS Project</h2>
-                <a href="https://justincrawfordonline.com/vue-project" target="_blank" class="open-popup-link"><img src="img/projects/vuejs-logo.jpg" alt=""></a>
+                <a href="https://justincrawfordonline.com/vue-project" target="_blank" ><img src="img/projects/vuejs-logo.jpg" alt=""></a>
                 <p>First app using Vue.JS framework.</p>
             </div>
         </div>

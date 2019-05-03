@@ -1,4 +1,4 @@
-const aboutMe = `<div class="newDiv main-body body">
+var aboutMe = `<div class="newDiv main-body body">
     <img src="img/logo_CreativeTech.png" alt="creative tech" class="creative-tech">
 
 <div class="about-grid-container">
@@ -6,7 +6,7 @@ const aboutMe = `<div class="newDiv main-body body">
         <img src="img/me.png" alt="picture of Justin">
         <h1>I make digital stuff
         </h1>
-        <h3>From tech support to game design I do it all! Majority of my experience is creating graphics for gaming software. I'm always
+        <h3>From tech support to game design I do it all! Majority of my experience is creating gaming software graphics. I'm always
         expanding my skills and looking for new opportunities. Have a project or hiring? Let me know!
         </h3>
     </div>
@@ -33,51 +33,51 @@ const aboutMe = `<div class="newDiv main-body body">
         
         <div class="software-icons photoshop">
             <img src="img/icons/photoshop.png" alt="photoshop">
-            <div class="meter">
-                <span style="width: 85%"></span>
+            <div>
+                <strong>Adobe Photoshop</strong>
             </div>
         </div>
         <div class="software-icons illustrator">
             <img src="img/icons/illustrator.png" alt="illustrator">
-            <div class="meter">
-                <span style="width: 70%"></span>
+            <div>
+                <strong>Adobe Illustrator</strong>
             </div>
         </div>
         <div class="software-icons aftereffects">
             <img src="img/icons/afterEffects.png" alt="after effects">
-            <div class="meter">
-                <span style="width: 65%"></span>
+            <div>
+                <strong>Adobe After Effects</strong>
             </div>
         </div>
         <div class="software-icons cinema4d">
             <img src="img/icons/cinema4d.png" alt="cinema 4d">
-            <div class="meter">
-                <span style="width: 75%"></span>
+            <div>
+                <strong>Cinema 4D</strong>
             </div>
         </div>
         <div class="software-icons 3ds-max">
             <img src="img/icons/3dsmax.png" alt="3ds Max">
-            <div class="meter">
-                <span style="width: 70%"></span>
+            <div>
+               <strong>Autodesk 3ds Max</strong>
             </div>
         </div>
         <h1 style="width: 100%">Languages I study</h1>
         <div class="software-icons javascript">
             <img src="img/icons/javascript.png" alt="javascript">
-            <div class="meter">
-                <span style="width: 60%"></span>
+            <div>
+                <strong>JavaScript</strong>
             </div>
         </div>
         <div class="software-icons css">
             <img src="img/icons/css.png" alt="css">
-            <div class="meter">
-                <span style="width: 65%"></span>
+            <div>
+                <strong>Cascading Style Sheets</strong>
             </div>
         </div>
         <div class="software-icons html">
             <img src="img/icons/html.png" alt="html">
-            <div class="meter">
-                <span style="width: 50%"></span>
+            <div>
+                <strong>Hyper Text Markup Language</strong>
             </div>
         </div>
         
