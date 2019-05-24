@@ -95,6 +95,12 @@ var aboutMe = `<div class="newDiv main-body body">
         </ul>
     </div>
 </div>
+<h1>Video Demo Reel</h1>
+
+<div class="iframe-container">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/_ZCl8_3_N6I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 <h1>Send me a message</h1>
 <div class="form-container">
                      <form action="https://formspree.io/justincrawfordonline@gmail.com" method="POST">
@@ -107,6 +113,7 @@ var aboutMe = `<div class="newDiv main-body body">
         <input type="submit" value="Send" id="email-submit-btn">
     </form>
                     </div> 
+                   
 </div>
 
                  `;
