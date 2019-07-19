@@ -141,7 +141,7 @@ h1,h2,h3,h4,p, strong {
   transform: rotate3d(0, 1, 0, 0deg);
   -moz-animation: none;
   animation: rotate3d 6s cubic-bezier(.15, -0.29, .82, 1.31) infinite forwards;
-  backface-visibility: hidden;
+  
 }
 
 .orbit-circle{
